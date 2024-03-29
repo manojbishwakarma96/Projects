@@ -1,0 +1,47 @@
+package com.springboot.blog.Service.Impl;
+
+import org.springframework.stereotype.Service;
+
+import com.springboot.blog.Entity.Comment;
+import com.springboot.blog.Payload.CommentDto;
+import com.springboot.blog.Repository.CommentRepository;
+import com.springboot.blog.Service.CommentService;
+
+@Service
+public class CommentServiceImpl implements CommentService{
+	private CommentRepository commentRepository;
+
+	public CommentServiceImpl(CommentRepository commentRepository) {
+		super();
+		this.commentRepository = commentRepository;
+	}
+
+	@Override
+	public CommentDto createComments(CommentDto commentDto, long postId) {
+		
+		return null;
+	}
+	//comment entity to comments dto
+	private CommentDto mapToDtoComments(Comment comment) {
+		CommentDto commentDto=new CommentDto();
+		commentDto.setId(comment.getId());
+		commentDto.setName(comment.getName());
+		commentDto.setBody(comment.getBody());
+		commentDto.setEmail(comment.getEmail());
+		return commentDto;
+	}
+	//comment dto to comments entity
+		private Comment mapToCommentEntity(CommentDto commentDto) {
+			Comment comment=new Comment();
+			comment.setId(commentDto.getId());
+			comment.setName(commentDto.getName());
+			comment.setBody(commentDto.getBody());
+			comment.setEmail(commentDto.getEmail());
+			return comment;
+		}
+
+    
+
+	 
+	
+}

@@ -1,0 +1,9 @@
+package com.springboot.blog.Service;
+
+import com.springboot.blog.Payload.PostDto;
+
+public interface PostService {
+	PostDto createPost(PostDto postDto);
+	
+
+}

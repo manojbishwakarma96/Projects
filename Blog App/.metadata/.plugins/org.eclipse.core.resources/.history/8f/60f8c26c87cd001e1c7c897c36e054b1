@@ -1,0 +1,20 @@
+package com.springboot.blog.Service.Impl;
+
+import org.springframework.stereotype.Service;
+
+import com.springboot.blog.Repository.CommentRepository;
+
+@Service
+public class CommentServiceImpl {
+	private CommentRepository commentRepository;
+
+	public CommentServiceImpl(CommentRepository commentRepository) {
+		super();
+		this.commentRepository = commentRepository;
+	}
+
+    
+
+	 
+	
+}

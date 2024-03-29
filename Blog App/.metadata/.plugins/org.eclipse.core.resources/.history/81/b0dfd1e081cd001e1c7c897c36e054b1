@@ -1,0 +1,17 @@
+package com.springboot.blog.Entity;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Data
+
+@Entity
+public class Comment {
+	private long id;
+	private String name;
+	private String email;
+	private String body;
+	
+	
+
+}
